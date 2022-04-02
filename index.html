@@ -62,7 +62,7 @@
 		
 				<p><b>This is an interactive demo of the static structure factor.</b> Click on the diffraction pattern (top right) or the plot of the radially averaged structure factor (bottom right) to examine the density waves contributing to a specific peak.</p>
 				
-				For more demonstrations, see:
+				Some additional background is given below. For more demonstrations, see:
 				<p><a href="https://www.softmatterdemos.org">www.softmatterdemos.org</a></p>
 				
 		</div>
@@ -85,6 +85,231 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="container">
+		
+			<p><br></p>
+			
+			<h2>Background</h2>
+			
+			<p>The static structure factor is an extremely useful tool for analyzing the global structure of many-body systems. Roughly speaking, it measures the presence of periodic density fluctuations in the system as a function of the length and direction of the wave vector. In particular, if we have a system of <i>N</i> particles at particle positions 
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <msub>
+      <mstyle mathvariant="bold">
+        <mi>𝐫</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <mi>…</mi>
+    <msub>
+      <mstyle mathvariant="bold">
+        <mi>𝐫</mi>
+      </mstyle>
+      <mi>N</mi>
+    </msub>
+  </mrow>
+</math>,
+			then the structure factor 
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>S</mi>
+    <mrow>
+      <mo stretchy="true" form="prefix">(</mo>
+      <mstyle mathvariant="bold">
+        <mi>𝐪</mi>
+      </mstyle>
+      <mo stretchy="true" form="postfix">)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>N</mi>
+    </mfrac>
+    <mrow>
+      <mo stretchy="true" form="prefix">⟨</mo>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>N</mi>
+      </munderover>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>N</mi>
+      </munderover>
+      <mo>exp</mo>
+      <mrow>
+        <mo stretchy="true" form="prefix">(</mo>
+        <mo>−</mo>
+        <mi>i</mi>
+        <mstyle mathvariant="bold">
+          <mi>𝐪</mi>
+        </mstyle>
+        <mo>⋅</mo>
+        <mrow>
+          <mo stretchy="true" form="prefix">(</mo>
+          <msub>
+            <mstyle mathvariant="bold">
+              <mi>𝐫</mi>
+            </mstyle>
+            <mi>j</mi>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mstyle mathvariant="bold">
+              <mi>𝐫</mi>
+            </mstyle>
+            <mi>k</mi>
+          </msub>
+          <mo stretchy="true" form="postfix">)</mo>
+        </mrow>
+        <mo stretchy="true" form="postfix">)</mo>
+      </mrow>
+      <mo stretchy="true" form="postfix">⟩</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>N</mi>
+    </mfrac>
+    <mrow>
+      <mo stretchy="true" form="prefix">⟨</mo>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>N</mi>
+      </munderover>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>N</mi>
+      </munderover>
+      <mo>cos</mo>
+      <mrow>
+        <mo stretchy="true" form="prefix">(</mo>
+        <mstyle mathvariant="bold">
+          <mi>𝐪</mi>
+        </mstyle>
+        <mo>⋅</mo>
+        <mrow>
+          <mo stretchy="true" form="prefix">(</mo>
+          <msub>
+            <mstyle mathvariant="bold">
+              <mi>𝐫</mi>
+            </mstyle>
+            <mi>j</mi>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mstyle mathvariant="bold">
+              <mi>𝐫</mi>
+            </mstyle>
+            <mi>k</mi>
+          </msub>
+          <mo stretchy="true" form="postfix">)</mo>
+        </mrow>
+        <mo stretchy="true" form="postfix">)</mo>
+      </mrow>
+      <mo stretchy="true" form="postfix">⟩</mo>
+    </mrow>
+    <mi>.</mi>
+  </mrow>
+</math>
+<!--S(\mathbf{q}) = \frac{1}{N} \left\langle \sum_{j=1}^N \sum_{k=1}^N \exp(-i \mathbf{q}\cdot (\mathbf{r}_j - \mathbf{r}_k)) \right\rangle = \frac{1}{N} \left\langle \sum_{j=1}^N \sum_{k=1}^N \cos(\mathbf{q}\cdot (\mathbf{r}_j - \mathbf{r}_k)) \right\rangle.-->
+			Here, the angular brackets denote an ensemble average. For a crystal, the structure factor shows sharp peaks (known as Bragg peaks) at specific wave vectors. To fully understand what the structure factor is measuring, it can be helpful to visualize how different interparticle distances contribute to these peaks. In this demo, you can explore this for several different crystal structures (switch via the menu button on the top left). The diffraction pattern in the top left corresponds to the structure factor 
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>S</mi>
+    <mrow>
+      <mo stretchy="true" form="prefix">(</mo>
+      <mstyle mathvariant="bold">
+        <mi>𝐪</mi>
+      </mstyle>
+      <mo stretchy="true" form="postfix">)</mo>
+    </mrow>
+  </mrow>
+</math>.
+			When you click on this pattern, the density wave <i>w</i>(<b>r</b>) corresponding to the chosen wave vector <b>q</b> will be plotted on top of the configuration:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>w</mi>
+    <mrow>
+      <mo stretchy="true" form="prefix">(</mo>
+      <mstyle mathvariant="bold">
+        <mi>𝐫</mi>
+      </mstyle>
+      <mo stretchy="true" form="postfix">)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mo>cos</mo>
+    <mrow>
+      <mo stretchy="true" form="prefix">(</mo>
+      <mstyle mathvariant="bold">
+        <mi>𝐪</mi>
+      </mstyle>
+      <mo>⋅</mo>
+      <mrow>
+        <mo stretchy="true" form="prefix">(</mo>
+        <mstyle mathvariant="bold">
+          <mi>𝐫</mi>
+        </mstyle>
+        <mo>−</mo>
+        <msub>
+          <mstyle mathvariant="bold">
+            <mi>𝐫</mi>
+          </mstyle>
+          <mstyle mathvariant="normal">
+            <mi>r</mi>
+            <mi>e</mi>
+            <mi>f</mi>
+          </mstyle>
+        </msub>
+        <mo stretchy="true" form="postfix">)</mo>
+      </mrow>
+      <mo stretchy="true" form="postfix">)</mo>
+    </mrow>
+	<mi>,</mi>
+  </mrow>
+</math>			
+			with 
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mstyle mathvariant="bold">
+      <mi>𝐫</mi>
+    </mstyle>
+    <mstyle mathvariant="normal">
+      <mi>r</mi>
+      <mi>e</mi>
+      <mi>f</mi>
+    </mstyle>
+  </msub>
+</math>
+			the position of the highlighted reference particle (which you can switch by clicking on another particle). Green indicates a high value. Negative values are shown as transparent (but can be highlighted as red by clicking one of the buttons on the left). Hence, if you select one of the peaks in the diffraction pattern, the particles whose centers are located in a green region are the ones whose distance to the reference particle contributes positively to this peak.  </p>
+			
+			<p>Note that you can also combine multiple wave vectors, by holding Shift when clicking on the diffraction pattern. Additionally, you can hold Control to add multiple wave vectors at once, taking the crystal symmetry into account. The small button on the top left of the diffraction pattern locally optimizes the choice of wave vectors, moving them to the nearest peak.</p>
+			
+			<p>The radially averaged structure factor (bottom right) is simply the average over all wave vectors <b>q</b> with the same magnitude. Clicking on the plot will again show a wave pattern indicating the contribution of pair distances to the selected peak.</p>
+			
+					
+		</div>
+		
     <script src="Build/WebGL.loader.js"></script>
 <script>
       var container = document.querySelector("#unity-container");
